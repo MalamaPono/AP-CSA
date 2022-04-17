@@ -1,0 +1,93 @@
+/*
+position:fixed; keeps something in fixed position and is always showing even through scrolling of document
+position:absolute;
+doesn't change and is in its own position not dependent of others unless it has a parent element with a relative position As long as parents are absolute or static it is dependent on itself and doesn't move based on parent.
+ */
+button {
+  background: red;
+  font-size: 40px;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+div {
+  border: 3px solid red;
+  background: yellow;
+  margin-top: 40px;
+  text-align: right;
+  position: static;
+}
+.one {
+  background: blue;
+}
+.two {
+  background: green;
+}
+.special {
+  background: lightcoral;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+
+/* 
+position static is default
+position relative more exciting. moves objects relative to its starting position 
+div {
+  border: 3px solid red;
+  background: yellow;
+  margin-top: 40px;
+  text-align: right;
+  position: static;
+}
+.one {
+  background: blue;
+  position: relative;
+  right: 50%;
+  bottom: 20px;
+  top:20rem;
+  left:15px;
+}
+.two {
+  background: green;
+}
+.special {
+  background: lightcoral;
+  font-size: 20px;
+}  */
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  float: left;
+  height: 400px;
+  width: 33.33%;
+}
+.one {
+  background: red;
+}
+.two {
+  background: blue;
+}
+.three {
+  background: green;
+}
+h1 {
+  clear: both;
+}
+
+ .banner {
+  border: 5px solid red;
+  padding: 10px;
+  overflow: hidden;
+}
+.one{
+ float:right;
+ margin-left:50px;
+} */

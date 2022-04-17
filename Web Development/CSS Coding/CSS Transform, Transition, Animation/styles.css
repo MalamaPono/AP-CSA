@@ -1,0 +1,245 @@
+/* 
+animation-fill-mode:what values are applied by the animation outside the time it is excecuting
+ */
+
+div {
+  width: 200px;
+  height: 100px;
+  color: white;
+  margin: 10px;
+}
+
+.animation {
+  background: blue;
+  animation-name: move;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-fill-mode: fowards;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(200px);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(20px);
+    opacity: 0.5;
+  }
+}
+
+/* 
+Transition 0 = 100%
+ANIMATION 0 1% 2%..... 100% (more control)
+
+div{
+ width:200px;
+ height:100px;
+ color:white;
+ margin:10px;
+}
+.transition{
+ background:red;
+ transition:all 2s linear;
+}
+.transition:hover{
+ background:yellow;
+ transform:translateX(100px);
+}
+.animation{
+ background:blue;
+ animation-name:move;
+ animation-duration:10s;
+ animation-iteration-count:2;
+ animation:move 10s infinite;
+}
+
+defining the animation code and how it will change over time specifically
+@keyframes move{
+ 0%{
+  transform:translateX(20);
+ }
+ 50%{
+  transform:translateX(100px);
+  background:red;
+ }
+ 75%{
+  transform:translateX(-200px);
+  background:yellow;
+ }
+ 100%{
+  transform:translateX(20px);
+  background:green;
+ }
+}
+
+how the transition takes place
+transition-timing-function:
+transition: all 3s here 5s;
+ease = default
+ease = slow start, fast, slow end
+linear = same speed start to end
+ease-in = slow start 
+ease-out = slow end
+ease-in-out = slow start, fast, slow end
+
+div {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  color: white;
+  margin: 15px;
+  transition: all 1s;
+}
+div:hover {
+  transform: translateX(100px);
+}
+.ease{
+ transition-timing-function:ease;
+}
+.linear{
+ transition-timing-function:linear;
+}
+.ease-in{
+ transition-timing-function:ease-in;
+}
+.ease-out{
+ transition-timing-function:ease-out;
+}
+.ease-in-out{
+ transition-timing-function:ease-in-out;
+}
+
+transitions shorthand
+transitions-delay:
+div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+.one {
+  background: red;
+}
+.two {
+  background: green;
+}
+.three{
+ color:blue;
+ transition:background 3s 5s,border-radius 5s 1s;
+ transition:all 4s 5s
+}
+.three:hover {
+  border-radius: 50%;
+  background:coral;
+}
+
+transition:change over time
+transition-property:
+transition-duration:
+div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+div:hover {
+  background: coral;
+}
+.one {
+  background: red;
+}
+.two {
+  background: green;
+}
+.three {
+  background: blue;
+  transition-property: background, border-radius;
+  transition-duration: 4s, 5s;
+}
+.three:hover {
+  border-radius: 50%;
+}
+
+transform: skew()
+div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+.one {
+  background: red;
+  transform:skewX(-20deg);
+}
+.two {
+  background: green;
+  transform:skewY(-20deg);
+}
+.three {
+  background: blue;
+  transform:skew(40deg,-20deg);
+}
+
+transform: rotate()
+div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+.one {
+  background: red;
+  transform:rotateZ(340deg);
+}
+.two {
+  background: green;
+  transform:rotateZ(45deg);
+}
+.three {
+  background: blue;
+  transform:rotateX(20deg);
+  transform:rotateY(20deg);
+}
+
+
+transform: scale()
+div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+.one {
+  background: red;
+  transform:scaleX(0.5);
+}
+.two {
+  background: green;
+  transform:scaleY(2);
+}
+.three {
+  background: blue;
+  transform:scale(0.5,0.5);
+
+transform: translate()
+div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+.one {
+  background: red;
+  transform: translateX(50%);
+}
+.two {
+  background: green;
+  transform:translateY(-30px);
+}
+.three {
+  background: blue;
+  transform:translateX(75px);
+  transform:translate(20px,30px);
+} */

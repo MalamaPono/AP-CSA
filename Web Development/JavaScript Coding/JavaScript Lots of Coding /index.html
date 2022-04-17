@@ -1,0 +1,301 @@
+<script>
+
+
+/* Math.random() rules
+1. Always use Math.random() with parenthesis
+2. Use Math.floor or (int) to cast to integer
+3. * by certain number to get 0 up to the number 1 less than the one u multiply by
+4. Add any number at the end to translate all posible digits up or down a certain amount that you choose
+*/
+
+//RANDOM WITHIN RANGE
+function randomInRange(min,max){
+ return Math.floor((Math.random() * (max-min+1)+min));
+}
+console.log(randomInRange(0,1));
+
+//TERNARY OPERATOR
+
+//regular if else
+function check(a,b){
+ if(a===b){
+  return true;
+ }else{
+  return false;
+ }
+}
+console.log(check(7,7));
+
+//ternary operator if else
+function checkTernary(a,b){
+ return a===b ? true:false;
+}
+console.log(checkTernary(7,7));
+
+//nested ternary with mutiple conditions
+function getSign(a){
+ return a > 0 ? "positive": a < 0 ? "negative":"zero";
+}
+console.log(getSign(0));
+
+//VAR VS LET INITIALIZATION
+/*
+use only let declaration so I donʻt get confused. Variable declaration and rules in java is the same as let declaration. const declaration in java script is same as final declaration in java. Const has all features of let initializing in terms of scope, but stays constant throughout entire program.
+*/
+"use strict"; //strict mode catches common coding mistakes and unsafe actions such as creating variable without initialization
+
+//checking scope of variables
+function checkScope(){
+ "use strict";
+ let i = "function scope";
+ if(true){
+  let i = "block scope";
+  console.log("Block scope i is: ", i);
+ }
+ console.log("Function scope i is: ", i);
+ return i;
+}
+checkScope();
+
+function printManyTimes(str){
+ "use strict";
+ const SENTENCE = str + " is cool!";
+ //sentence = str + " is amazing!"
+  for(var i = 0; i < str.length; i++){
+  console.log(SENTENCE);
+ }
+}
+printManyTimes("freeCodeCamp");
+
+//Mutate/Change of Array Declared with Const
+const s = [5,7,2];
+function editInPlace(){
+ "use strict";
+ s[0] = 2;
+ s[1] = 5;
+ s[2] = 7;
+}
+editInPlace();
+console.log(s);
+
+//Prevent object mutation/change
+const MATH_CONSTANTS = {
+ PI:3.14
+};
+function freezeObj(){
+ "use strict";
+
+ Object.freeze(MATH_CONSTANTS);
+ //freezes object so cannot be changed
+
+ try{
+  MATH_CONSTANTS["PI"] = 99;
+ }catch(ex){
+  console.log(ex);
+ }
+ return MATH_CONSTANTS["PI"];
+}
+console.log(MATH_CONSTANTS["PI"]);
+
+//Using Arrow Functions to Write Concise Anonymous Functions
+//normal
+var magic = function(){
+ return new Date();
+}
+//arrow function
+var magic = () => new Date();
+
+//Arrow Function with Parameters
+//normal
+function concat(arr1,arr2){
+ return arr1.concat(arr2);
+}
+//arrow function
+var concat = (arr1,arr2) => arr1.concat(arr2);
+
+console.log(concat([2,3,2], [3,212,3]));
+console.log(concat([3,1,2],[99,398,48]));
+
+//whenever one function takes another function as argument that is good use of arrow function
+
+//HIGHER ORDER FUNCTIONS
+const realNumberArray = [4,5.6,-9.8,3.14,32,2,5,8.34,-2];
+const squareList = (arr) => {
+ const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+ return squaredIntegers;
+};
+console.log(squareList(realNumberArray));
+
+//USING DEFAULT PARAMETERS
+const increment = (function(){
+ return function increment(number, value = 1){
+  return number + value;
+ };
+})();
+console.log(increment(5,2));
+console.log(increment(5));
+
+//REST OPERATOR WITH FUNCTION PARAMETERS
+
+//normal way
+const sum = (function(){
+ return function sum(x,y,z){
+  const args = [x,y,z];
+  return args.reduce((a,b) => a + b, 0);
+  };
+})();
+
+//rest operator
+const sum2 = (function() {
+ return function sum2(...args){
+  return args.reduce((a,b) => a + b, 0);
+ };
+})();
+
+//Spread operator to Evaluate Arrays In-Place
+const arr1 = ["JAN","FEB","MAR","APR","MAY"];
+let arr2;
+(function(){
+ arr2 = [...arr1]; //spreading out contents of arr1 and asssigning it to arr2. Not making arr1 equal to arr2, but making arr2 equal contents of arr1
+ arr1[1] = "potato"
+})();
+console.log(arr2);
+
+//Destructuring Assignment to Assign Variables from Objects
+let voxel = {x:3.6,y:7.4,z:6.54};
+
+//old way
+let x = voxel["z"];
+let y = voxel["x"];
+let z = voxel["z"];
+
+//destructuring way
+const {x:a,y:b,z:c} = voxel;
+
+const AVG_TEMPERATURES = {
+ tody:77.5,
+ tomorrow:79
+};
+
+function getTempOfTmrw(avgTemperatures){
+ const { tomorrow: tempOfTomorrow} = avgTemperatures;
+ return tempOfTomorrow; 
+}
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
+
+//Desctructuring Assignment with the Rest Operator
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list){
+ const[ , , ...arr] = list;
+ return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr);
+console.log(source);
+
+//Use Destructuring Assignment to Pass an Object as Functions Parameters
+const stats = {
+ max: 56.78,
+ standard_deviation:4.34,
+ median:34.54,
+ mode:23.87,
+ min:-0.75,
+ average:35.85
+};
+
+const half = (function() {
+ return function half({max,min}){
+ return (stats["max"] + stats["min"]/2.0);
+ };
+})();
+console.log(stats);
+console.log(half(stats));
+
+//Creating Strings with template literals
+const person = {
+ name:"Zodiac",
+ age:56
+};
+
+const greetings = `Hello, my name is ${person.name}! I am ${person.age} years old.`;
+console.log(greetings);
+
+//practice with template literals
+let result = {
+ success: ["max-length", "no-and", "prefer-arrow-functions"],
+ failure: ["no-var", "var-on-top", "linebreak"],
+ skipped:["id-blacklist","no-dup-keys"]
+};
+
+function makeList(arr){
+ const resultDisplayArray = [];
+ for(let i = 0; i < arr.length; i++){
+  resultDisplayArray.push(`<li class = "text-warning" > ${arr[i]}</li>`);
+ }
+}
+const resultDisplayArray = makeList(result["failure"]);
+console.log(resultDisplayArray);
+
+//Write function in object
+const bicycle = {
+ gear:2,
+ setGear:function(newGear){
+  "use strict";
+  this.gear = newGear;
+ }
+}
+bicycle.setGear(3);
+console.log(bicycle["gear"]);
+
+//creating classes
+function makeClass(){
+ class Vegetable{
+  constructor(name){
+   this.name = name;
+  }
+ }
+ return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable("carrot");
+console.log(carrot["name"]);
+
+//GETTERS AND SETTERS
+class Book{
+ constructor(author){
+  this._author = author;
+ }
+
+ get writer(){
+  return this._author;
+ }
+ set writer(updatedAuthor){
+  this._author = updatedAuthor;
+ }
+}
+
+//underscore in variable signifies that the variable is private to only certain class
+
+//creating temperature class
+function makeClass(){
+ class Thermostat{
+  constructor(temp){
+   this._temp = 5/9 * (temp-32);
+  }
+  get temperature(){
+   return this._temp;
+  }
+  set temperature(updatedTemp){
+   this._temp = 5/9 * (temp-32);
+  }
+ }
+ return Thermostat;
+}
+
+const Thermostat = makeClass();
+const thermos = new Thermostat(76);
+let temp = thermos.temperature; //getter
+temp = thermos.temperature;
+console.log(temp);
+
+</script>

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=WordFrequenciesMap
+comment1.params=filename
+comment1.target=void\ countWords(java.lang.String)
+comment2.params=map
+comment2.target=java.lang.String\ findMax(java.util.HashMap)
+comment3.params=filename
+comment3.target=void\ countWordsMap(java.lang.String)
+comment4.params=
+comment4.target=void\ tester()
+numComments=5

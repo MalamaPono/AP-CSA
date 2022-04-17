@@ -1,0 +1,47 @@
+.here {
+  width: 25px;
+  padding-left: 0px;
+  background: blue;
+  color: white;
+}
+.here li:first-child {
+  background: black;
+}
+.here li:nth-child(1) {
+  background: red;
+}
+/* p:first-line {
+  text-transform: uppercase;
+}
+p:first-letter {
+  color: blue;
+}
+p:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+} */
+p.shadow {
+  background: blue;
+  color: black;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* preserves white space */
+.whitespace {
+  white-space: pre;
+}
+
+.left-right {
+  direction: ltr;
+}
+
+.right-left {
+  direction: rtl;
+}

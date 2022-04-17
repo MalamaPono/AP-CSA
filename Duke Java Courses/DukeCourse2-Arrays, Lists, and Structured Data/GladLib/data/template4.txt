@@ -1,0 +1,1 @@
+Hello my name is Koa. I am a <noun> and I look like an <adjective>. On my free time I like to <verb>. I am from <country> and like the color <color>. Bye. 

@@ -1,0 +1,38 @@
+div {
+  background: blue;
+  color: white;
+}
+
+#quote {
+  font-family: "verdana", "gill sans";
+  color: black;
+}
+
+.movie {
+  color: white;
+  background: steelblue;
+}
+
+span#author {
+  text-transform: uppercase;
+}
+
+#skills ol li {
+  color: purple;
+}
+
+#skills ul li {
+  color: white;
+}
+
+/* all paragraphs after h3 tag */
+h3 + p {
+  background: black;
+}
+
+/* every paragraph with certain class */
+p[class] {
+  background: green;
+}
+
+/* every paragraph with certain ID */

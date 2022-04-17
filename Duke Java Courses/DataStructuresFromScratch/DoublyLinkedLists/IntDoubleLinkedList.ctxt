@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=IntDoubleLinkedList
+comment0.text=\n\ Write\ a\ description\ of\ LinkedList\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=item
+comment1.target=IntDoubleLinkedList(int)
+comment2.params=item
+comment2.target=boolean\ insertItem(int)
+comment3.params=item
+comment3.target=boolean\ deleteItem(int)
+comment4.params=
+comment4.target=void\ printList()
+numComments=5

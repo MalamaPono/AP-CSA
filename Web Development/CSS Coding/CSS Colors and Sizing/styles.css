@@ -1,0 +1,66 @@
+/* font-size,width,height,pixels(absolute unit of measurement doesnt depend on screen size as it will just scroll, constant) */
+/* % is a relative value and depends on parent dimenstions to adjust its own */
+/*
+body starts with default size for text(1em=16px)
+em - RELATIVE depends on parent
+rem - Doesn't depend on parent, but depends on root which is html in this case. So if you change html dimensions in CSS, then rem will be altered
+1em = 16px default browser style;
+1em = base value
+*/
+/*
+Number in front of vh or vw indicates percent
+50vw = 50 percent of screen width 
+100vh = 100 percent of sceeen height
+vh - height - RELATIVE to percent of the screen
+vw - width - RELATIVE to percent of the screen
+*/
+
+/*
+HSL
+HEX (hexidecimal) values #RRGGBB
+HEX marked by #first in color property
+123456789 A(10) B(11) C(12) D(13) E(14) F(15)
+Way more options than rgb so more color variety
+           #FF0000 - RED
+           #00FF00 - Green
+
+#first {
+  color: #5accc6c4;
+  background: #000000;
+}
+#second {
+  color: #ffffff;
+  background: #00ff00;
+}
+#three {
+  color: #0000ff;
+  background: #f15025;
+}
+#four {
+  color: #f426f9;
+  background: #222222;
+}
+*/
+
+/* rgb gives red green blue value */
+/* rgba gives red green blue value and then fourth parameter is opacity */
+/* opacity is from 0 to 1, the higher the opacity the darker it is(black), the lower the opacity the lighter it is(white) */
+/* #first {
+  color: rgb(100, 123, 56);
+  background: rgba(0, 0, 0, 0.5);
+}
+#second {
+  color: rgb(45, 10, 34);
+  background: rgba(0, 0, 0, 0.25);
+}
+#three {
+  color: rgb(255, 0, 0);
+  background: rgba(0, 0, 0, 0);
+}
+#four {
+  color: rgb(0, 0, 255);
+  background: rgba(0, 0, 0, 1);
+}
+body {
+  background: rgba(10, 200, 200, 0.56);
+} */

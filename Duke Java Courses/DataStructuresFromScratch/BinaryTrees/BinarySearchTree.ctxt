@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=BinarySearchTree
+comment0.text=\n\ Write\ a\ description\ of\ Binary\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=BinarySearchTree()
+comment2.params=item
+comment2.target=boolean\ insert(Person)
+comment3.params=n
+comment3.target=void\ showAll(BinarySearchTree.Node)
+comment4.params=key
+comment4.target=BinarySearchTree.Node\ findNode(java.lang.String)
+comment5.params=n
+comment5.target=Person\ getData(BinarySearchTree.Node)
+comment6.params=child
+comment6.target=BinarySearchTree.Node\ findParent(java.lang.String)
+numComments=7

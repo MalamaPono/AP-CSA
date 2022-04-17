@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=AIPaddle
+comment1.params=player\ b
+comment1.target=AIPaddle(int,\ Ball)
+comment2.params=g
+comment2.target=void\ draw(java.awt.Graphics)
+comment3.params=
+comment3.target=void\ move()
+comment4.params=
+comment4.target=int\ getY()
+numComments=5

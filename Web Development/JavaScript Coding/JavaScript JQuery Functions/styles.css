@@ -1,0 +1,11 @@
+img {
+  width: 200px;
+  height: 200px;
+}
+.styleclass {
+  border: 2px solid yellow;
+}
+.paraclass {
+  color: blue;
+  background: black;
+}

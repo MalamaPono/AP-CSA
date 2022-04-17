@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=StdList
+comment0.text=\n\ Write\ a\ description\ of\ StdList\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=StdList()
+comment2.params=std
+comment2.target=boolean\ insertStd(Student)
+comment3.params=rollno
+comment3.target=Student\ fetchData(java.lang.String)
+comment4.params=rollno
+comment4.target=void\ deleteStudent(java.lang.String)
+comment5.params=rollno
+comment5.target=boolean\ haveRollno(java.lang.String)
+comment6.params=
+comment6.target=void\ showAll()
+numComments=7

@@ -1,0 +1,44 @@
+/* a stands for href links */
+a:hover {
+  background: black;
+  color: white;
+}
+body {
+  background: greenyellow;
+}
+
+#wrapper {
+  margin: 0 auto;
+  background: white;
+  width: 850px;
+  height: 1200px;
+}
+header {
+  padding: 0px 0px 10px 0px;
+}
+#horznav {
+  display: block;
+  background: black;
+  color: white;
+}
+#para-1:after {
+  content: "kocha";
+}
+#para-1:before {
+  content: "hammah";
+}
+#para-2 {
+  word-spacing: 20px;
+  letter-spacing: 10px;
+}
+footer {
+  clear: both;
+  background: black;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+ol {
+  list-style-type: lower-alpha;
+}

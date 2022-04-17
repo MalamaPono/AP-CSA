@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=IntStack
+comment0.text=\n\ Write\ a\ description\ of\ IntStack\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=IntStack()
+comment2.params=size
+comment2.target=IntStack(int)
+comment3.params=item
+comment3.target=boolean\ push(int)
+comment4.params=
+comment4.target=int\ pop()
+comment5.params=
+comment5.target=boolean\ isFull()
+comment6.params=
+comment6.target=boolean\ isEmpty()
+numComments=7

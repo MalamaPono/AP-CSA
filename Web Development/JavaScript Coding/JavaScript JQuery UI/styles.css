@@ -1,0 +1,16 @@
+img {
+  width: 200px;
+  height: 200px;
+}
+#drop {
+  width: 400px;
+  height: 400px;
+  float: right;
+  background: aquamarine;
+}
+
+#block {
+  width: 150px;
+  height: 60px;
+  background: blueviolet;
+}

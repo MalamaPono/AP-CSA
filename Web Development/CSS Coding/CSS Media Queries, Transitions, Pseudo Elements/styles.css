@@ -1,0 +1,142 @@
+/* 
+pseudo elements ::before ::after CONTENT not element content:'' ---- required
+img ---  does not work
+can't add before and after for images
+ */
+
+p::before {
+  content: "hello ";
+  display: block;
+  background: black;
+  font-weight: bold;
+  font-size: 2rem;
+  color: red;
+}
+p::after {
+  /* content: "after"; not allowed need content in pseudo code */
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: green;
+}
+div {
+  width: 60vw;
+  margin: 100px auto;
+  position: relative;
+}
+img {
+  width: 100%;
+  display: block;
+}
+div::before {
+  content: "";
+  border: 10px solid gray;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -40px;
+  left: -40px;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+div::after {
+  content: "";
+  background: gray;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+div:hover::after,
+div:hover::before {
+  top: 0;
+  left: 0;
+}
+
+/*
+z-index --- z-axis
+position:static ----> does not work with z index. absolute and relative do work
+
+img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.banner {
+  margin: 20px;
+  width: 70vw;
+  height: 70vh;
+  border: 5px solid red;
+  position: relative;
+}
+.one {
+  top: 0;
+  left: 0;
+  
+}
+.two {
+  top: 10%;
+  left: 10%;
+  z-index: 1;
+}
+.three {
+  top: 20%;
+  left: 20%;
+  z-index: 2;
+}
+
+Media Queries
+Responsive Design
+Style Elements On Different Screen Sizes
+min-width --- starting from
+max-width --- up to
+Mobile First
+
+body {
+  background: yellow;
+}
+.banner {
+  background: blue;
+}
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+min-width is saying starting from a certain pixel or part of screen these new rules apply
+max-width is saying that up to a certian pixel or screen length then have these certain properties 
+@media screen and (max-width: 576px) {
+  body {
+    background: red;
+  }
+  .banner {
+    background: yellow;
+    border-radius:20px;
+  }
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background: green;
+  }
+  .banner {
+    background: blue;
+  }
+  h1 {
+    color: red;
+    font-size: 60px;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+} */

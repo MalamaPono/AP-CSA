@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=HashTable
+comment0.text=\n\ Write\ a\ description\ of\ HashTable\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=HashTable()
+comment2.params=rollno
+comment2.target=int\ toHashCode(java.lang.String)
+comment3.params=key\ data
+comment3.target=boolean\ insert(int,\ Student)
+comment4.params=
+comment4.target=int\ getTotal()
+comment5.params=rollno
+comment5.target=Student\ fetchStdInfo(java.lang.String)
+comment6.params=rollno
+comment6.target=boolean\ deleteStd(java.lang.String)
+comment7.params=
+comment7.target=void\ showData()
+numComments=8

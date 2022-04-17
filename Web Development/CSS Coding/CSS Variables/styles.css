@@ -1,0 +1,87 @@
+/* 
+Semantic HTMl gives strucutre to browser and website to certaint things have certain classes and properties. For example footers and headers will have specific structures. 
+ */
+
+/* 
+text-shadow
+box-shadow
+
+CSS3 Text Shadow Generator is good source
+CSSmatic good source for Box Shadows
+h1{
+ text-shadow:1px 1px 3px red;
+}
+.box{
+ width:200px;
+ height:100px;
+ background:blue;
+ margin:20px;
+ transition:all 0.5s linear;
+}
+
+BROWSER PREFIXES EASIER TO USE AND CAN BE AUTOMATED SO YOU DON'T HAVE TO TYPE IT OUT EACH AND EVERY TIME
+.box:hover{
+ -webkit-box-shadow:10px 10x 5px 0px rgba(0,0,0,0.75);
+ -moz-box-shadow:10px 10px 5px 0px rgba(0,0,0,0.75);
+ box-shadow:10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+ICONS
+Font-Awesome Icons perfect website to find cool icons
+Free, East to start, simple syntax
+Find on internet than apply code
+
+.fa-home{
+ color:green;
+}
+.socal-icon{
+ font-size:4rem;
+ color:blue;
+
+CSS
+  VARIABLES AKA Custom Properties hold a
+  value andreuse
+  it
+  --varName:value
+  property:var(--varName)
+  scope
+  :root {
+}
+== global element == local any property .heading {
+  color: #f15039;
+}
+.text {
+  color: #32ff0e;
+}
+.main-text {
+  color: #1313fa;
+}
+.second-heading {
+  color: #f15025;
+}
+
+:root {
+  --primaryColor: #1313fa;
+  --mainTransition: all 0.4s linear;
+}
+.heading {
+  color: var(---primaryColor);
+}
+.second-heading {
+  color: var(---primaryColor);
+  transition: var(-mainTransition);
+}
+.second-heading:hover {
+  color: var(--secondaryColor);
+}
+
+div {
+  --primaryRed: red;
+}
+.main-text {
+  color: var(--primaryRed);
+}
+.third-heading {
+  color: var(--primaryRed);
+} 
+*/

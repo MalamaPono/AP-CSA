@@ -1,0 +1,21 @@
+.post {
+  width: 760px;
+  margin: 100px auto;
+  border: 10px solid gray;
+}
+.post2 {
+  width: 760px;
+  margin: 100px auto;
+  border: 10px solid blue;
+}
+.date {
+  color: purple;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+}
+p {
+  width: 760px;
+}
+hr {
+  width: 760px;
+}

@@ -1,0 +1,86 @@
+<script>
+ // OBJECTS:
+  var dog = { "name": "camper", "legs": 4, "tails": 1, "friends": ["everything!"] };
+
+  var myDog = { "name": "hello", "legs": 2, "tails": 1, 2: 5, "friends": ["john", 1, "bob"] };
+
+  myDog["friends"][0] = "carol";
+  var hatValue = myDog["friends"][0];
+  myDog[2] = 10;
+  var num = myDog[2];
+  console.log(hatValue);
+  console.log(num);
+
+  var object = { "alpha": "koa", "beta": "dane", "loser": "landon", "fag": "all" };
+  function find(val) {
+   return object[val];
+  }
+  console.log(find("beta"));
+
+  //to check if object has certain property
+  var obj = { koa: "hammer", fun: "dsj", dizz: "sus" };
+
+  function checkObj(checkProp) {
+   if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+   } else {
+    return "not found";
+   }
+  }
+
+  //manipulating complex objects
+  var music = [
+   { "artist": "bill", "title": "pianoman", "realease_year": 1973, "formats": ["CD", "8T", "LP"], "gold": true },
+
+   { "artist": "john", "title": "heaven", "realease_year": 1953, "formats": ["CD", "8T", "LP"], "gold": false }
+  ];
+  console.log(music[0]["formats"][2]);
+
+  //accesscing nested objects
+  var myStorage = { "car": { "inside": { "glove box": "maps", "passenger seat": "crumbs" }, "outside": { "trunk": "jack", "tire": "flat" } } };
+  var gloveBoxContents = myStorage["car"]["inside"]["glove box"];
+  console.log(gloveBoxContents);
+
+  //accesscing nested arrays
+  var plants = [{ type: "flowers", list: ["rose", "tulip", "dandeloin"] }, { "type": "trees", list: ["fir", "pine", "birch"] }];
+  console.log(plants[1]["list"][0]);
+
+  //record collection project (objects practice)
+  var collection = {
+   "2548": {
+    "album": "slippery",
+    "artis": "jon",
+    "tracks": ["let it rock", "you give love a bad name"]
+   },
+   "2468": {
+    "album": "1999",
+    "artist": "carol",
+    "tracks": ["1999", "little red corvetter"]
+   },
+   "1245": {
+    "artist": "jon",
+    "tracks": []
+   },
+   "5439": {
+    "album": "Abba Gold"
+   }
+  };
+
+  //keeping copy of collection for tests
+  var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+  function updateRecords(id, prop, value) {
+   if (value === "") {
+    delete collection[id][prop];
+   } else if (prop === "tracks") {
+    //this is saying if tracks property is already there, then we are going to set it equal to itself. However, if the tracks property is not there, we will set it to an empty array.
+    collection[id][prop] = collection[id][prop] || [];
+    collection[id][prop].push(value);
+   } else {
+    collection[id][prop] = value;
+   }
+   return collection;
+  }
+
+  console.log(updateRecords(5439, "artist", "kocha"));
+</script>
